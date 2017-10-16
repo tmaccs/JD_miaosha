@@ -20,8 +20,8 @@ def login(b):  #登录京东
 def loop(b):  #循环点击
     try:
         if b.title=="订单结算页 -京东商城":
-            # b.find_by_text("保存收货人信息").click()
-            # b.find_by_text("保存支付及配送方式").click()
+            b.find_by_text("保存收货人信息").click()
+            b.find_by_text("保存支付及配送方式").click()
             b.find_by_id("order-submit").click()
             return b
         else:  #多次抢购操作后，有可能会被转到京东首页，所以要再打开手机主页
@@ -56,13 +56,13 @@ def buy_time(buytime):
                     break
 
 b=Browser(driver_name="chrome") #打开浏览器
-b.visit("https://item.jd.com/4918296.html")
+b.visit("https://item.jd.com/5292169.html")
 login(b)
 #获取现在时间
 now = datetime.datetime.now()
 print(now.strftime('%Y-%m-%d %H:%M:%S'))
 #设置抢购的时间
-buy_time('2017-10-10 21:58:01')
+buy_time('2017-10-13 18:00:01')
 
 
 

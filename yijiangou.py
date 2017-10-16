@@ -10,8 +10,8 @@ def login(b):  #登录京东
     b.click_link_by_text("你好，请登录")
     b.click_link_by_text("账户登录")
     time.sleep(1)
-    b.fill("loginname","tmaccs")  #填写账户密码
-    b.fill("nloginpwd","Zz236668777")
+    b.fill("loginname","yhytmaccs")  #填写账户密码
+    b.fill("nloginpwd","236668777")
     b.find_by_id("loginsubmit").click()
     # time.sleep(0.1)
     return b
@@ -64,10 +64,10 @@ def buy_time(buytime):
                     break
 
 b=Browser(driver_name="chrome") #打开浏览器
-b.visit("https://item.jd.com/4702786.html")
+b.visit("https://item.jd.com/5525866.html")
 login(b)
 #获取现在时间
 now = datetime.datetime.now()
 print(now.strftime('%Y-%m-%d %H:%M:%S'))
 #设置抢购的时间
-buy_time('2017-10-12 12:00:01')
+buy_time('2017-10-13 22:00:01')
